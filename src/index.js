@@ -1,5 +1,6 @@
 
 // for ian, store password in a more secure way, https://discordjs.guide/creating-your-bot/#using-environment-variables 
+token = "";
 
 // Client is our bot
 const { Client, IntentsBitField, ButtonBuilder, ButtonStyle } = require('discord.js')
@@ -27,15 +28,15 @@ client.on('messageCreate', (message) => {
         message.reply('Facts!');
     }
 
-    const btn1 = new ButtonBuilder()
-        .setLabel('pee pee poo poo')
-        .setStyle(ButtonStyle.Primary)
-        .setCustomId('btn1');
+    // const btn1 = new ButtonBuilder()
+    //     .setLabel('pee pee poo poo')
+    //     .setStyle(ButtonStyle.Primary)
+    //     .setCustomId('btn1');
 
-    const btn2 = new ButtonBuilder()
-    .setLabel('pee pee poo poo')
-    .setStyle(ButtonStyle.Danger)
-    .setCustomId('btn2');
+    // const btn2 = new ButtonBuilder()
+    // .setLabel('pee pee poo poo')
+    // .setStyle(ButtonStyle.Danger)
+    // .setCustomId('btn2');
 });
 
-client.login('MTI1MjQ3ODAyNjcyNjM3OTU2MQ.GXz6Ib.CQqIHZ44Tlb3HOAszxyQium9Wwjp9ynPyUL9vM');
+client.login(`${token}`);
